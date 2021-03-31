@@ -1,13 +1,78 @@
 <html>
 
 <head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <!-- <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css"> -->
+  <title>IST 256 Project Sprint 1</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <meta charset="utf-8">
+  <meta name="description" content="IST 256 Sprint 1">
+  <meta name="keywords" content="IST 256,Sprint 1, Team 4">
+  <meta name="author" content="Team 4">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <script src="script/script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+  <!-- https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+  <!-- nav bar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="cart.html">Cart</a>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="myFunction()">Menu
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content" id="myDropdown">
+        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+        <a href="about.html">About Us</a>
+        <a href="mens.html">Men's Clothing</a>
+        <a href="womens.html">Women's Clothing</a>
+        <a href="kids.html">Kid's Clothing</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="checkout.html">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td><img src="images/IST-256-Home-Page-Image.jpeg" alt="fashion" class="responsive">
+    </td>
+    <td><img src="images/IST-256-Home-Page-Image6.jpeg" alt="fashion" class="responsive">
+    </td>
+    <td><img src="images/IST-256-Home-Page-Image4.jpeg" alt="fashion" class="responsive">
+    </td>
+    <td><img src="images/IST-256-Home-Page-Image6.jpeg" alt="fashion" class="responsive">
+    </td>
+    <td><img src="images/IST-256-Home-Page-Image5.jpeg" alt="fashion" class="responsive">
+    </td>
+    <td><img src="images/IST-256-homepage-image2.jpeg" alt="fashion" class="responsive">
+    </td>
+    <td><img src="images/IST-256-Home-Page-Image5.jpeg" alt="fashion" class="responsive">
+    </td>
+    <td><img src="images/IST-256-Home-Page-Image3.jpeg" alt="fashion" class="responsive">
+    </td>
+  </tr>
+
+  <div class="myDiv">
+    <div class="grid-container">
+      <p>
+      <ul>
+        <div class="grid-item">
+          <h1>Our Mission</h1>
+        </div>
+        <div class="grid-item">
+
+          <h2>Our goal is to sell fashionable clothing made from recycled materials at an affordable
+            price.</h2>
+
+        </div>
+        </p>
+    </div>
+  </div>
 </body>
 
 </html>
