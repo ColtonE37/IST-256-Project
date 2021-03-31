@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Resources: -->
+    <!-- https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+    <title>IST 256 Project Sprint 1</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="IST 256 Sprint 1">
+    <meta name="keywords" content="IST 256,Sprint 1, Team 4">
+    <meta name="author" content="Team 4">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+    <!-- nav bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Menu
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <a href="about.html">About Us</a>
+                <a href="mens.html">Men's Clothing</a>
+                <a href="womens.html">Women's Clothing</a>
+                <a href="kids.html">Kid's Clothing</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <h1>Our Women's Products</h1>
+    <br>
+    <br>
+    <div class="flex-container1">
+        <div>
+            <img src="images/WomenShirt1.jpg" alt="Women's Shirt" class="responsive1">
+            <h3>BUTTERFLY SLEEVE BLOUSE</h3>
+            <h3>$29.99</h3>
+            <li>SMALL</li>
+            <li>MEDIUM</li>
+            <li>LARGE</li>
+        </div>
+        <div>
+            <img src="images/WomenShirt2.jpg" alt="Women's Shirt" class="responsive1">
+            <h3>SHORT SLEEVE TUNIC</h3>
+            <h3>$18.99</h3>
+            <li>SMALL</li>
+            <li>MEDIUM</li>
+            <li>LARGE</li>
+        </div>
+        <div>
+            <img src="images/WomenJeans1.jpg" alt="Women's Jeans" class="responsive1">
+            <h3>LEVI JEANS</h3>
+            <h3>$37.99</h3>
+            <li>28-30</li>
+            <li>31-32</li>
+            <li>34-35</li>
+        </div>
+        <div>
+            <img src="images/WomenJeans2.jpg" alt="Women's Jeans" class="responsive1">
+            <h3>SKINNY RIPPED JEANS</h3>
+            <h3>$39.99</h3>
+            <li>28-30</li>
+            <li>31-32</li>
+            <li>34-35</li>
+        </div>
+        <div>
+            <img src="images/WomenDress1.jpg" alt="Women's Dress" class="responsive1">
+            <h3>BLACK AND GOLD BLOCK DRESS</h3>
+            <h3>$24.99</h3>
+            <li>SMALL</li>
+            <li>MEDIUM</li>
+            <li>LARGE</li>
+        </div>
+        <div>
+            <img src="images/WomenDress2.jpg" alt="Women's Dress" class="responsive1">
+            <h3>BLACK AND TEAL DRESS</h3>
+            <h3>$29.99</h3>
+            <li>SMALL</li>
+            <li>MEDIUM</li>
+            <li>LARGE</li>
+        </div>
+        <div>
+            <img src="images/WomenAccessory1.jpg" alt="Women's Purse" class="responsive1">
+            <h3>SHOULDER PURSE</h3>
+            <h3>$44.99</h3>
+            <li>RED</li>
+            <li>BLACK</li>
+            <li>WHITE</li>
+        </div>
+        <div>
+            <img src="images/WomenAccessory2.jpg" alt="Women's Necklace" class="responsive1">
+            <h3>DIAMOND NECKLACE</h3>
+            <h3>$74.99</h3>
+            <li>SMALL</li>
+            <li>MEDIUM</li>
+            <li>LARGE</li>
+        </div>
+    </div>
+   
+</body>

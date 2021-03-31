@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Resources: -->
+    <!-- https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+    <title>IST 256 Project Sprint 1</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="IST 256 Sprint 1">
+    <meta name="keywords" content="IST 256,Sprint 1, Team 4">
+    <meta name="author" content="Team 4">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+    <!-- nav bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Menu
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <a href="about.html">About Us</a>
+                <a href="mens.html">Men's Clothing</a>
+                <a href="womens.html">Women's Clothing</a>
+                <a href="kids.html">Kid's Clothing</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <h1>About Us Page</h1>
+</body>
