@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Resources: -->
+    <!-- https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+    <title>IST 256 Project Sprint 1</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="IST 256 Sprint 1">
+    <meta name="keywords" content="IST 256,Sprint 1, Team 4">
+    <meta name="author" content="Team 4">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+    <!-- nav bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Menu
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <a href="about.html">About Us</a>
+                <a href="mens.html">Men's Clothing</a>
+                <a href="womens.html">Women's Clothing</a>
+                <a href="kids.html">Kid's Clothing</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <h1>Our Men's Products</h1>
+    <br>
+    <br>
+    <div class="flex-container1">
+        <!-- This will be filled with all of our content -->
+        <div class="flex-item1">
+            <img src="images/MenShirt1.jpg" alt="Men's Shirt" class="responsive1">
+            <h3>PLAID SHIRT</h3>
+            <h3>$24.99</h3>
+            <li>SMALL</li>
+            <li>MEDIUM</li>
+            <li>LARGE</li>
+        </div>
+        <div class="flex-item1">
+            <img src="images/MenShirt2.jpg" alt="Men's Shirt" class="responsive1">
+            <h3>JEAN JACKET</h3>
+            <h3>$49.99</h3>
+            <li>SMALL</li>
+            <li>MEDIUM</li>
+            <li>LARGE</li>
+        </div>
+        <div class="flex-item2">
+            <img src="images/MenPants1.jpg" alt="Men's Pants" class="responsive1">
+            <h3>SLIM FIT DENIM JEANS</h3>
+            <h3>$34.99</h3>
+            <li>28-30</li>
+            <li>31-32</li>
+            <li>34-35</li>
+        </div>
+        <div class="flex-item2">
+            <img src="images/MenPants2.jpg" alt="Men's Pants" class="responsive1">
+            <h3>SKINNY JEANS</h3>
+            <h3>$38.99</h3>
+            <li>28-30</li>
+            <li>31-32</li>
+            <li>34-35</li>
+        </div>
+        <div class="flex-item3">
+            <img src="images/MenShorts1.jpg" alt="Men's Shorts" class="responsive1">
+            <h3>SHORTS</h3>
+            <h3>$16.99</h3>
+            <li>SMALL</li>
+            <li>MEDIUM</li>
+            <li>LARGE</li>
+        </div>
+        <div class="flex-item3">
+            <img src="images/MenShorts2.jpg" alt="Men's Shorts" class="responsive1">
+            <h3>NIKE SHORTS</h3>
+            <h3>$22.99</h3>
+            <li>SMALL</li>
+            <li>MEDIUM</li>
+            <li>LARGE</li>
+        </div>
+        <div class="flex-item4">
+            <img src="images/MenShoes1.jpg" alt="Men's Shoes" class="responsive1">
+            <h3>NIKE AIR MAX 270</h3>
+            <h3>$49.99</h3>
+            <li>Size 7</li>
+            <li>Size 8</li>
+            <li>Size 9</li>
+        </div>
+        <div class="flex-item4">
+            <img src="images/MenShoes2.jpg" alt="Men's Shoes" class="responsive1">
+            <h3>DAVOS HIGH BOOTS</h3>
+            <h3>$29.99</h3>
+            <li>Size 7</li>
+            <li>Size 8</li>
+            <li>Size 9</li>
+        </div>
+    </div>
+    
+</body>
