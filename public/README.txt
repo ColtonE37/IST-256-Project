@@ -29,3 +29,6 @@ somewhat identical in code. Once all of the HTML and CSS was completed for these
 Colton and I worked to put the webisite together.
 
 Steven - Did not make any contributions.
+
+Works Cited
+https://www.w3schools.com/howto/howto_js_dropdown.asp/03/24/2021
