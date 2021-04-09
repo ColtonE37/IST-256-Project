@@ -21,7 +21,7 @@ var settings = {
 };
 
 $.ajax(settings).done(function (response) {
-  console.log(response.products);
+  console.log(response);
 });
 
  module.exports = router;
