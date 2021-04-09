@@ -24,3 +24,5 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 });
 
+ module.exports = router;
+
