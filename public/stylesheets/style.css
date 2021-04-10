@@ -160,3 +160,40 @@ h2 {
   margin-left: 25px;
   margin-right: auto;
 }
+
+/* https://www.w3schools.com/css/css_align.asp */
+.center {
+  margin: auto;
+  width: 50%;
+  /* border: 3px solid green; */
+  padding: 10px;
+}
+
+/* For collapsible Objective style guide credit to w3schools 
+ https://www.w3schools.com/howto/howto_js_collapsible.asp */
+ .collapsible {
+  background-color: rgb(59, 104, 163);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(137, 171, 235);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #cf6b95;
+}
+
+.btnCenter {
+  text-align: center; 
+}
