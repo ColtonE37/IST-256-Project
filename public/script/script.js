@@ -22,18 +22,21 @@ function filterFunction() {
   }
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
   console.log("Ready!");
   makeRequest();
 });
 
-function makeRequest(){
+function makeRequest() {
   $.ajax({
-      method:'GET',
-      url:'/clothing',
-      success: (data) => {
-          console.log(data);
-      }
+    method: 'GET',
+    url: 'https://fakestoreapi.com/products',
+    headers: {
+      "Cookie": "__cfduid=d6790497a73979398425979e3d580f4d81618008586"
+    },
+    success: (data) => {
+      console.log(data);
+    }
   });
 }
 
