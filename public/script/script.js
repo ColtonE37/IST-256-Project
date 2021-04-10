@@ -24,19 +24,23 @@ function filterFunction() {
 
 $(document).ready(function () {
   console.log("Ready!");
-  makeRequest();
+  makeRequest('GET', '/mensClothing', (response) => {
+    for (var i = 0; i < response.length; i++) {
+      $('.api-data')
+        .append('<img src="' + response[i].image + '" class="responsive1"/>')
+        .append('<h3>' + response[i].title + '</h3>')
+        .append('<h3>' + response[i].price + '</h3>')
+        .append('<p>' + response[i].description + '</p>')
+    }
+  });
+  makeRequest('GET', 'https://fakestoreapi.com/carts/1');
 });
 
-function makeRequest() {
+function makeRequest(method, url, successFn) {
   $.ajax({
-    method: 'GET',
-    url: 'https://fakestoreapi.com/products',
-    headers: {
-      "Cookie": "__cfduid=d6790497a73979398425979e3d580f4d81618008586"
-    },
-    success: (data) => {
-      console.log(data);
-    }
+    method: method,
+    url: url,
+    success: successFn
   });
 }
 
