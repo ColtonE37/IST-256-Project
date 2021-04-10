@@ -33,7 +33,9 @@ $(document).ready(function () {
         .append('<p>' + response[i].description + '</p>')
     }
   });
-  makeRequest('GET', 'https://fakestoreapi.com/carts/1');
+  makeRequest('GET', 'https://fakestoreapi.com/carts/1', (response) => {
+    console.log(JSON.stringify(response));
+  })
 });
 
 function makeRequest(method, url, successFn) {
