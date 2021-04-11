@@ -29,7 +29,7 @@ $(document).ready(function () {
       $('.api-data-men')
         .append('<img src="' + response[i].image + '" class="responsive1"/>')
         .append('<h3>' + response[i].title + '</h3>')
-        .append('<h3>' + response[i].price + '</h3>')
+        .append('<h3>' + '$' + response[i].price + '</h3>')
         .append('<p>' + response[i].description + '</p>')
     }
     //console.log(JSON.stringify(response))
@@ -39,7 +39,7 @@ $(document).ready(function () {
       $('.api-data-women')
         .append('<img src="' + response[i].image + '" class="responsive1"/>')
         .append('<h3>' + response[i].title + '</h3>')
-        .append('<h3>' + response[i].price + '</h3>')
+        .append('<h3>' + '$' + response[i].price + '</h3>')
         .append('<p>' + response[i].description + '</p>')
     }
     //console.log(JSON.stringify(response))
@@ -49,7 +49,7 @@ $(document).ready(function () {
       $('.api-data-electronics')
         .append('<img src="' + response[i].image + '" class="responsive1"/>')
         .append('<h3>' + response[i].title + '</h3>')
-        .append('<h3>' + response[i].price + '</h3>')
+        .append('<h3>' + '$' + response[i].price + '</h3>')
         .append('<p>' + response[i].description + '</p>')
     }
     //console.log(JSON.stringify(response))

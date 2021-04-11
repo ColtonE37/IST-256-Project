@@ -126,10 +126,6 @@ h1 {
 body {
   background-color:#ca9f65;
 }
-h3 {
-  color:white;
-  margin-left: 150px;
-}
 .flex-container1 {
   display: flex;
   flex-wrap: wrap;
@@ -142,31 +138,22 @@ h3 {
   padding: 5px;
   font-size: 20px;
 }
-li {
-    text-align: left;
-    padding: 1ex;
-    color:white;
-    font-size: 20px;
-    margin-left: 150px;
-}
 h2 {
   text-align: center;
 }
 
 .responsive1 {
-  width: 525px;
+  width: 475px;
   height: 500px;
   display: block;
   margin-left: 25px;
-  margin-right: auto;
 }
 
 /* https://www.w3schools.com/css/css_align.asp */
 .center {
   margin: auto;
-  width: 50%;
-  /* border: 3px solid green; */
-  padding: 10px;
+  width: 28%;
+  text-align: center;
 }
 
 /* For collapsible Objective style guide credit to w3schools 
@@ -196,4 +183,8 @@ h2 {
 
 .btnCenter {
   text-align: center; 
+}
+
+.aboutPara {
+  text-align: center;
 }

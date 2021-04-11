@@ -37,4 +37,60 @@
     </div>
 
     <h1>Checkout Page</h1>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><img src="images/IST-256-Home-Page-Image.jpeg" alt="fashion" class="responsive">
+        </td>
+        <td><img src="images/IST-256-Home-Page-Image6.jpeg" alt="fashion" class="responsive">
+        </td>
+        <td><img src="images/IST-256-Home-Page-Image4.jpeg" alt="fashion" class="responsive">
+        </td>
+        <td><img src="images/IST-256-Home-Page-Image6.jpeg" alt="fashion" class="responsive">
+        </td>
+        <td><img src="images/IST-256-Home-Page-Image5.jpeg" alt="fashion" class="responsive">
+        </td>
+        <td><img src="images/IST-256-homepage-image2.jpeg" alt="fashion" class="responsive">
+        </td>
+        <td><img src="images/IST-256-Home-Page-Image5.jpeg" alt="fashion" class="responsive">
+        </td>
+        <td><img src="images/IST-256-Home-Page-Image3.jpeg" alt="fashion" class="responsive">
+        </td>
+      </tr>
+
+      <div class="center">
+      <!-- https://www.codebrainer.com/blog/contact-form-in-javascript for my contact form  -->
+      <h3>Order Information</h3>
+
+    
+      <form onsubmit="return false"></form>
+      
+      <input type="text" placeholder="Enter your first name" id="firstName">
+      <input type="text" placeholder="Enter your last name" id="lastName">
+      <input type="email" placeholder="Enter your email" id="email">
+      <br>
+      <br>
+
+      <input type="text" placeholder="Enter your street address" id="streetAddress">
+      <input type="text" placeholder="Enter your ZIP code" id="zip">
+      <br>
+      <br>
+
+      <select id="state">
+       <option disabled selected value> -- Select a State -- </option>
+       <option value="Pennsylvania">Pennsylvania</option>
+       <option value="NewYork">New York</option>
+       <option value="California">California</option>
+       <option value="Other">Other</option>
+      </select>
+      <br>
+      <br>
+      
+      <input type="radio" id="Employer" name="discription" value="employer"> Express Shipping
+      <input type="radio" id="Other" name="discription" value="other"> Standard Shipping
+      <br>
+      <br>
+      
+      <button onclick="placeOrder();">Place Order</button>
+      </div>
 </body>
