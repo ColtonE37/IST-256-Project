@@ -80,3 +80,31 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+// for contact form credit to codebrainer https://www.codebrainer.com/blog/contact-form-in-javascript
+   //method which initializes my variables
+   class User {
+    constructor(firstName, lastName, discription, state, email, streetAddress, zip, question) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.discription = discription;
+    this.state = state;
+    this.email = email;
+    this.streetAdress= streetAddress;
+    this.zipCode = zip;
+    this.question = question;
+    }
+   }
+
+   function sendContact() {
+       //this alert is sent after the send contact button is pushed 
+        alert(firstName.value + " " + "thanks for reaching out!");
+
+        //attempted to actually send this info to my email couldnt figure it out
+        location = "mailto:thomas.j.beck23@gmail.com";
+   }
+
+//checkout page
+function placeOrder() {
+alert(firstName.value + " " + "Your order has been placed! Thanks for shopping with us!")
+}
