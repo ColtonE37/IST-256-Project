@@ -116,39 +116,3 @@ $(document).ready(function () {
 });
 
 var currentProgramList;
-
-function displayPrograms() {
-  console.log("/scripts.js displayPrograms called");
-  $.ajax({
-    method: 'GET',
-    url: '/programs',
-    success: (data) => {
-      console.log("/scripts.js displayPrograms succeeded");
-      console.log("Data from displayPrograms" + data);
-      currentProgramList = data.slice();
-      $("#programList").empty();
-      data.forEach(function (arrayItem) {
-        var item = arrayItem.name;
-        console.log("Array item name: " + item);
-        $("#programList").append("<li>" + item + "</li>")
-      });
-    }
-  });
-
-  $("#deleteBtn").click(function () {
-    //Should get the Id of the selected item
-    //This is deleting first item in the list.
-    console.log("First tiem in the currentProgramList: " + currentProgramList[0]._id);
-    var itemToDelete = cuurentProgramList[0]._id;
-
-    $.ajax({
-      type: "DELETE",
-      url: "/programs/" + itemToDelete
-    }).done(function (data) {
-      //Successfully deleted program
-      displayPrograms();
-    }).fail(function (jqXHR) {
-      $("#error").html("The program could not be deleted.");
-    });
-  });
-}
