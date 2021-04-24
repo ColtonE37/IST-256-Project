@@ -70,7 +70,7 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+  coll[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
@@ -82,29 +82,73 @@ for (i = 0; i < coll.length; i++) {
 }
 
 // for contact form credit to codebrainer https://www.codebrainer.com/blog/contact-form-in-javascript
-   //method which initializes my variables
-   class User {
-    constructor(firstName, lastName, discription, state, email, streetAddress, zip, question) {
+//method which initializes my variables
+class User {
+  constructor(firstName, lastName, discription, state, email, streetAddress, zip, question) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.discription = discription;
     this.state = state;
     this.email = email;
-    this.streetAdress= streetAddress;
+    this.streetAdress = streetAddress;
     this.zipCode = zip;
     this.question = question;
-    }
-   }
+  }
+}
 
-   function sendContact() {
-       //this alert is sent after the send contact button is pushed 
-        alert(firstName.value + " " + "thanks for reaching out!");
+function sendContact() {
+  //this alert is sent after the send contact button is pushed 
+  alert(firstName.value + " " + "thanks for reaching out!");
 
-        //attempted to actually send this info to my email couldnt figure it out
-        location = "mailto:thomas.j.beck23@gmail.com";
-   }
+  //attempted to actually send this info to my email couldnt figure it out
+  location = "mailto:thomas.j.beck23@gmail.com";
+}
 
 //checkout page
 function placeOrder() {
-alert(firstName.value + " " + "Your order has been placed! Thanks for shopping with us!")
+  alert(firstName.value + " " + "Your order has been placed! Thanks for shopping with us!")
+}
+
+
+$(document).ready(function () {
+  console.log('Ready!');
+  displayPrograms();
+});
+
+var currentProgramList;
+
+function displayPrograms() {
+  console.log("/scripts.js displayPrograms called");
+  $.ajax({
+    method: 'GET',
+    url: '/programs',
+    success: (data) => {
+      console.log("/scripts.js displayPrograms succeeded");
+      console.log("Data from displayPrograms" + data);
+      currentProgramList = data.slice();
+      $("#programList").empty();
+      data.forEach(function (arrayItem) {
+        var item = arrayItem.name;
+        console.log("Array item name: " + item);
+        $("#programList").append("<li>" + item + "</li>")
+      });
+    }
+  });
+
+  $("#deleteBtn").click(function () {
+    //Should get the Id of the selected item
+    //This is deleting first item in the list.
+    console.log("First tiem in the currentProgramList: " + currentProgramList[0]._id);
+    var itemToDelete = cuurentProgramList[0]._id;
+
+    $.ajax({
+      type: "DELETE",
+      url: "/programs/" + itemToDelete
+    }).done(function (data) {
+      //Successfully deleted program
+      displayPrograms();
+    }).fail(function (jqXHR) {
+      $("#error").html("The program could not be deleted.");
+    });
+  });
 }

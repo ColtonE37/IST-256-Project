@@ -1,0 +1,47 @@
+<!-- public/program.html-->
+<head>
+    <!-- Resources: -->
+    <!-- https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+    <title>IST 256 Project Sprint 2</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="IST 256 Sprint 2">
+    <meta name="keywords" content="IST 256,Sprint 2, Team 4">
+    <meta name="author" content="Team 4">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+    <br>
+    <br>
+    <div>
+        <h3>Welcome to my basic demo!</h3>
+    </div>
+    <br>
+    <div>
+        <!--<form method="post" action="/programs">-->
+            <form method="post" action="/programs" id="form">
+                Name: <input type="text" name="name"><br>
+                Career: <input type="text" name="career"><br>
+                Description: <input type="text" name="description"><br>
+                <br>
+                <!-- <input type="submit" value="Save" onclick="createProgram()"> -->
+                <input type="submit" value="Save">
+                </form>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button id="b1" onlcick="displayPrograms()">Get Programs</button>
+    </div>
+    <br>
+    <br>
+    <div>
+        <p id="tableData">Here is the data:</p>
+        <ol id="programList"></ol>
+    </div>
+    <div>
+        <button id="deleteBtn">Delete Program</button>
+    </div>
+</body>
