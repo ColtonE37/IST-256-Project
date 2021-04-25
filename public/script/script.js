@@ -35,6 +35,7 @@ $(document).ready(function () {
     }
   });
   // https://stackoverflow.com/questions/16026942/how-do-i-chain-three-asynchronous-calls-using-jquery-promises
+  // https://api.jquery.com/on/
   makeRequest('GET', '/mensClothing', (response) => {
     for (var i = 0; i < response.length; i++) {
       $('.api-data-men')
