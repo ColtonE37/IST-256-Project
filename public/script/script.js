@@ -24,15 +24,36 @@ function filterFunction() {
 
 $(document).ready(function () {
   console.log("Ready!");
+  makeRequest('GET', '/currentCart', (response) => {
+    console.log("Current Cart: ", response); //response is cart object
+  }, (error) => {
+    if (error.status === 404) {
+      console.log("No cart found. Creating new cart.");
+      makeRequest('POST', '/postCart')
+    } else {
+      console.error("Error loading cart.", error);
+    }
+  });
   makeRequest('GET', '/mensClothing', (response) => {
     for (var i = 0; i < response.length; i++) {
       $('.api-data-men')
         .append('<img src="' + response[i].image + '" class="responsive1"/>')
         .append('<h3>' + response[i].title + '</h3>')
-        .append('<h3>' + '$' + response[i].price + '</h3>')
         .append('<p>' + response[i].description + '</p>')
+        .append('<span>' + '$' + response[i].price + '</span> &nbsp')
+        .append('<button id="mens-btn-' + i + '">Add Item</button>')
     }
-    //console.log(JSON.stringify(response))
+  }).then((response) => {
+    for (var i = 0; i < response.length; i++) {
+      console.log(response[i]);
+      $('#mens-btn-' + i).on('click', response[i], function (event) {
+        makeRequest('PUT', '/updateCartProducts', (updatedCart) => {
+          console.log("Cart updated successfully!");
+        }, error => {
+          console.error("Error updating cart occurred.");
+        }, event.data)
+      })
+    }
   });
   makeRequest('GET', '/womensClothing', (response) => {
     for (var i = 0; i < response.length; i++) {
@@ -55,11 +76,13 @@ $(document).ready(function () {
     //console.log(JSON.stringify(response))
   });
 
-  function makeRequest(method, url, successFn) {
-    $.ajax({
+  function makeRequest(method, url, successFn, errorFn, data) {
+    return $.ajax({
       method: method,
       url: url,
-      success: successFn
+      success: successFn,
+      error: errorFn,
+      data: data
     });
   }
 })
@@ -108,11 +131,3 @@ function sendContact() {
 function placeOrder() {
   alert(firstName.value + " " + "Your order has been placed! Thanks for shopping with us!")
 }
-
-
-$(document).ready(function () {
-  console.log('Ready!');
-  displayPrograms();
-});
-
-var currentProgramList;
