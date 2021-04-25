@@ -35,7 +35,6 @@ $(document).ready(function () {
     }
   });
   // https://stackoverflow.com/questions/16026942/how-do-i-chain-three-asynchronous-calls-using-jquery-promises
-  // https://api.jquery.com/on/
   makeRequest('GET', '/mensClothing', (response) => {
     for (var i = 0; i < response.length; i++) {
       $('.api-data-men')
@@ -47,12 +46,11 @@ $(document).ready(function () {
     }
   }).then((response) => {
     for (var i = 0; i < response.length; i++) {
-      console.log(response[i]);
-      $('#mens-btn-' + i).on('click', response[i], function (event) {
+      $('#mens-btn-' + i).click(response[i], function (event) {
         makeRequest('PUT', '/updateCartProducts', (updatedCart) => {
-          console.log("Cart updated successfully!");
+          console.log("Cart updated successfully! ", updatedCart);
         }, error => {
-          console.error("Error updating cart occurred.");
+          console.error("Error updating cart occurred.", error);
         }, event.data)
       })
     }
