@@ -8,6 +8,8 @@ router.get('/currentCart', cartCntl.getCurrentCart);
 //Ask about why this doesn't work when in mens_clothing.js
 router.put('/updateCartProducts', cartCntl.updateCartProducts); 
 
+router.get('/getCartProducts', cartCntl.getCartProducts);
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express'});

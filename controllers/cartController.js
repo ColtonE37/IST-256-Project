@@ -39,7 +39,7 @@ exports.create = (req, res) => {
  * Get current cart
  */
 exports.getCurrentCart = (req, res) => {
-    Cart.findOne({ date: new Date(Date.now()).toISOString().substring(0, 10)})
+    Cart.findOne({ date: new Date(Date.now()).toISOString().substring(0, 10) })
         .then((cart) => {
             console.log("Get current cart.", new Date(Date.now()).toISOString().substring(0, 10));
             if (!cart) {
@@ -62,7 +62,7 @@ exports.getCurrentCart = (req, res) => {
  * Get current cart products
  */
 exports.getCartProducts = (req, res) => {
-    Cart.find({ date: new Date(Date.now()).toISOString().substring(0, 10)}).select('products')
+    Cart.find({ date: new Date(Date.now()).toISOString().substring(0, 10) }).select('products')
         .then((products) => {
             if (!products) {
                 res.status(404).send({
@@ -91,7 +91,7 @@ exports.updateCartProducts = (req, res) => {
             message: "No products to update cart."
         });
     } else {
-        Cart.findOneAndUpdate({ date: new Date(Date.now()).toISOString().substring(0, 10)}, { "$push": { products: product } }, { new: true })
+        Cart.findOneAndUpdate({ date: new Date(Date.now()).toISOString().substring(0, 10) }, { "$push": { products: product } }, { new: true })
             .then(updatedCart => {
                 console.log("Cart was successfully updated.");
                 res.status(200).send(updatedCart);
@@ -111,7 +111,7 @@ exports.resetCart = (req, res) => {
     const date = new Date(Date.now()).toISOString().substring(0, 10);
     console.log("Cart to reset with date: " + date);
 
-    Cart.findOneAndDelete({ date: new Date(Date.now()).toISOString().substring(0, 10)})
+    Cart.findOneAndDelete({ date: new Date(Date.now()).toISOString().substring(0, 10) })
         .then(deletedCart => {
             console.log("Cart was successfully reset.");
             this.create();

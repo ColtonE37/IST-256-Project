@@ -23,7 +23,6 @@ function filterFunction() {
 }
 
 $(document).ready(function () {
-  doAjaxRequest();
   console.log("Ready!");
   makeRequest('GET', '/currentCart', (response) => {
     console.log("Current Cart: ", response); //response is cart object
@@ -96,29 +95,13 @@ $(document).ready(function () {
       })
     }
   });
-  // makeRequest('GET', '/getCartProducts', (response) => {
-  //   for (var i = 0; i < response.length; i++) {
-  //     $('.api-data-cart')
-  //       .append('<h3>' + response[i].title + '</h3>')
-  //       .append('<span>' + '$' + response[i].price + '</span> &nbsp')
-  //   }
-  // }).then((response) => {
-  //     makeRequest('PUT', '/getCartProducts', (cartProducts) => {
-  //       console.log("Get products called.", cartProducts);
-  //     }, error => {
-  //       console.error("Error occurred.", error);
-  //     })
-  // });
-
-  function doAjaxRequest() {
-    $.ajax({
-        type: "GET",
-        url: "/getCartProducts"
-    }).done(function (response) {
-        console.log(response);
-        displayData(response);
-    });
-}
+  makeRequest('GET', '/getCartProducts', (response) => {
+    for (var i = 0; i < response.length; i++) {
+      $('.api-data-cart')
+        .append('<h3>' + response[i].title + '</h3>')
+        .append('<span>' + '$' + response[i].price + '</span> &nbsp')
+    }
+  });
 
   function makeRequest(method, url, successFn, errorFn, data) {
     return $.ajax({
@@ -179,11 +162,4 @@ function placeOrder() {
 function deleteCart() {
   alert("The cart has been deleted!");
   window.location.reload();
-}
-
-//Cart page products
-function displayData(data) {
-  let content = $("#content");
-  content.append($(`<h3>${data.title}</h3>`));
-  content.append($(`<h3>${data.price}</h3>`));
 }
