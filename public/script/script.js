@@ -60,20 +60,40 @@ $(document).ready(function () {
       $('.api-data-women')
         .append('<img src="' + response[i].image + '" class="responsive1"/>')
         .append('<h3>' + response[i].title + '</h3>')
-        .append('<h3>' + '$' + response[i].price + '</h3>')
         .append('<p>' + response[i].description + '</p>')
+        .append('<span>' + '$' + response[i].price + '</span> &nbsp')
+        .append('<button id="womens-btn-' + i + '">Add Item</button>')
     }
-    //console.log(JSON.stringify(response))
+  }).then((response) => {
+    for (var i = 0; i < response.length; i++) {
+      $('#womens-btn-' + i).click(response[i], function (event) {
+        makeRequest('PUT', '/updateCartProducts', (updatedCart) => {
+          console.log("Cart updated successfully! ", updatedCart);
+        }, error => {
+          console.error("Error updating cart occurred.", error);
+        }, event.data)
+      })
+    }
   });
   makeRequest('GET', '/electronicsStuff', (response) => {
     for (var i = 0; i < response.length; i++) {
       $('.api-data-electronics')
         .append('<img src="' + response[i].image + '" class="responsive1"/>')
         .append('<h3>' + response[i].title + '</h3>')
-        .append('<h3>' + '$' + response[i].price + '</h3>')
         .append('<p>' + response[i].description + '</p>')
+        .append('<span>' + '$' + response[i].price + '</span> &nbsp')
+        .append('<button id="electronic-btn-' + i + '">Add Item</button>')
     }
-    //console.log(JSON.stringify(response))
+  }).then((response) => {
+    for (var i = 0; i < response.length; i++) {
+      $('#electronic-btn-' + i).click(response[i], function (event) {
+        makeRequest('PUT', '/updateCartProducts', (updatedCart) => {
+          console.log("Cart updated successfully! ", updatedCart);
+        }, error => {
+          console.error("Error updating cart occurred.", error);
+        }, event.data)
+      })
+    }
   });
 
   function makeRequest(method, url, successFn, errorFn, data) {
