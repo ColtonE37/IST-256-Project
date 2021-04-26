@@ -62,13 +62,17 @@
     <br>
 
     <div class="center">
-
-        <h3>Your cart is empty!</h3>
-        <h3>Total:</h3>
-        <h3>$0.00</h3>
-
+        <div class="flex-container1">
+            <div class="flex-item1 api-data-cart">
+            </div>
+        </div>
+        <div id="content">
+        </div>
         <!-- https://www.w3schools.com/html/html_links.asp -->
         <form action="checkout.html">
             <input type="submit" value="Proceed to Checkout" />
         </form>
+        <br>
+
+        <button id="cart-Btn" onclick="deleteCart();">Delete Cart</button>
 </body>
