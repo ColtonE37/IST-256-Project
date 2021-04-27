@@ -151,7 +151,7 @@ function sendContact() {
   alert(firstName.value + " " + "thanks for reaching out!");
 
   //attempted to actually send this info to my email couldnt figure it out
-  location = "mailto:thomas.j.beck23@gmail.com";
+  // location = "mailto:thomas.j.beck23@gmail.com";
 }
 
 //checkout page
