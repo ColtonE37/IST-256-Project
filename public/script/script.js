@@ -147,6 +147,12 @@ function sendContact() {
 
 //checkout page
 function placeOrder() {
+  makeRequest('DELETE', '/resetCart', (response) => {
+    //https://stackoverflow.com/questions/3715047/how-to-reload-a-page-using-javascript
+    window.location.reload();
+  }, error => {
+    alert("The cart could not be deleted" + error);
+  })
   alert(firstName.value + ", your order has been placed! Thanks for shopping with us!")
 }
 
