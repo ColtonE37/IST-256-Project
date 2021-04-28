@@ -142,12 +142,12 @@ class User {
 
 function sendContact() {
   //this alert is sent after the send contact button is pushed 
-  alert(firstName.value + " " + ", thanks for reaching out!");
+  alert(firstName.value + ", thanks for reaching out!");
 }
 
 //checkout page
 function placeOrder() {
-  alert(firstName.value + " " + ", your order has been placed! Thanks for shopping with us!")
+  alert(firstName.value + ", your order has been placed! Thanks for shopping with us!")
 }
 
 function deleteCart() {
