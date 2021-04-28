@@ -29,7 +29,7 @@ exports.create = (req, res) => {
             res.status(200);
         })
         .catch((err) => {
-            res.staus(500).send({
+            res.status(500).send({
                 message: err.message || "Some error occurred while creating the cart.",
             });
         });
@@ -49,28 +49,6 @@ exports.getCurrentCart = (req, res) => {
             } else {
                 console.log("Get Current Cart called.");
                 res.status(200).send(cart);
-            }
-        })
-        .catch((err) => {
-            res.status(500).send({
-                message: err.message || "Error Occurred",
-            });
-        });
-};
-
-/**
- * Get current cart products
- */
-exports.getCartProducts = (req, res) => {
-    Cart.find({ date: new Date(Date.now()).toISOString().substring(0, 10) }).select('products')
-        .then((products) => {
-            if (!products) {
-                res.status(404).send({
-                    message: "Cart could not be found."
-                })
-            } else {
-                console.log("Get Cart Products called.");
-                res.status(200).send(products);
             }
         })
         .catch((err) => {
@@ -114,7 +92,9 @@ exports.resetCart = (req, res) => {
     Cart.findOneAndDelete({ date: new Date(Date.now()).toISOString().substring(0, 10) })
         .then(deletedCart => {
             console.log("Cart was successfully reset.");
-            this.create();
+            res.status(200).send({
+                message: "Cart was reset!"
+            })
         })
         .catch(err => {
             res.status(500).send({

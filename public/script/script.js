@@ -96,24 +96,14 @@ $(document).ready(function () {
       })
     }
   });
-  makeRequest('GET', '/getCartProducts', (response) => {
-    for (var i = 0; i < response.length; i++) {
+  makeRequest('GET', '/currentCart', (response) => {
+    for (var i = 0; i < response.products.length; i++) {
       $('.api-data-cart')
-        .append('<h3>' + response[i].title + '</h3>')
-        .append('<span>' + '$' + response[i].price + '</span> &nbsp')
+        .append('<h3>' + response.products[i].title + '</h3>')
+        .append('<span>' + '$' + response.products[i].price + '</span> &nbsp')
     }
   });
-
-  function makeRequest(method, url, successFn, errorFn, data) {
-    return $.ajax({
-      method: method,
-      url: url,
-      success: successFn,
-      error: errorFn,
-      data: data
-    });
-  }
-})
+});
 
 //For collapsible Objective style guide credit to w3schools 
 // https://www.w3schools.com/howto/howto_js_collapsible.asp
@@ -161,6 +151,22 @@ function placeOrder() {
 }
 
 function deleteCart() {
-  alert("The cart has been deleted!");
-  window.location.reload();
+  makeRequest('DELETE', '/resetCart', (response) => {
+    alert("The cart has been deleted!");
+    //https://stackoverflow.com/questions/3715047/how-to-reload-a-page-using-javascript
+    window.location.reload();
+  }, error => {
+    alert("The cart could not be deleted" + error);
+  })
 }
+
+function makeRequest(method, url, successFn, errorFn, data) {
+  return $.ajax({
+    method: method,
+    url: url,
+    success: successFn,
+    error: errorFn,
+    data: data
+  });
+}
+

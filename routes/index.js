@@ -4,11 +4,10 @@ const cartCntl = require("../controllers/cartController");
 
 router.post('/postCart', cartCntl.create);
 router.get('/currentCart', cartCntl.getCurrentCart);
+router.delete('/resetCart', cartCntl.resetCart);
 
 //Ask about why this doesn't work when in mens_clothing.js
 router.put('/updateCartProducts', cartCntl.updateCartProducts); 
-
-router.get('/getCartProducts', cartCntl.getCartProducts);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
