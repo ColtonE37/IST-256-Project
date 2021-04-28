@@ -11,7 +11,6 @@ a {
 /* dropdown menu  */
 #myInput {
   box-sizing: border-box;
-  /* background-image: url('searchicon.png'); */
   background-position: 14px 12px;
   background-repeat: no-repeat;
   font-size: 16px;
@@ -118,7 +117,7 @@ a {
 }
 
 
-/* kids.html, mens.html, womens.html */
+/* electronics.html, mens.html, womens.html */
 h1 {
   color:white;
   text-align: center;
