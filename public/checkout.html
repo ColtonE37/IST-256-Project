@@ -60,45 +60,47 @@
 
     <div class="center">
         <!-- https://www.codebrainer.com/blog/contact-form-in-javascript for my contact form  -->
-        <h3>Order Information</h3>
+        <h3 style="color:white">Order Information</h3>
 
+        
+            <form onsubmit="return false"></form>
 
-        <form onsubmit="return false"></form>
+            <input type="text" placeholder="Enter your first name" id="firstName">
+            <input type="text" placeholder="Enter your last name" id="lastName">
+            <br>
+            <br>
+            <input type="email" placeholder="Enter your email" id="email">
+            <br>
+            <br>
 
-        <input type="text" placeholder="Enter your first name" id="firstName">
-        <input type="text" placeholder="Enter your last name" id="lastName">
-        <br>
-        <br>
-        <input type="email" placeholder="Enter your email" id="email">
-        <br>
-        <br>
+            <input type="text" placeholder="Enter your street address" id="streetAddress">
+            <input type="text" placeholder="Enter your ZIP code" id="zip">
+            <br>
+            <br>
 
-        <input type="text" placeholder="Enter your street address" id="streetAddress">
-        <input type="text" placeholder="Enter your ZIP code" id="zip">
-        <br>
-        <br>
+            <select id="state">
+                <option disabled selected value> -- Select a State -- </option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="NewYork">New York</option>
+                <option value="California">California</option>
+                <option value="Other">Other</option>
+            </select>
+            <br>
+            <br>
+            
 
-        <select id="state">
-            <option disabled selected value> -- Select a State -- </option>
-            <option value="Pennsylvania">Pennsylvania</option>
-            <option value="NewYork">New York</option>
-            <option value="California">California</option>
-            <option value="Other">Other</option>
-        </select>
-        <br>
-        <br>
+            <input type="radio" id="Employer" name="discription" value="employer"> Express Shipping
+            <input type="radio" id="Other" name="discription" value="other"> Standard Shipping
+            <br>
+            <br>
 
-        <input type="radio" id="Employer" name="discription" value="employer"> Express Shipping
-        <input type="radio" id="Other" name="discription" value="other"> Standard Shipping
-        <br>
-        <br>
-
-        <div class="flex-container1">
-            <div class="flex-item1 api-data-cart">
+            <div class="flex-container1">
+                <div class="flex-item1 api-data-cart">
+                </div>
             </div>
-        </div>
-        <br>
+            <br>
 
-        <button onclick="placeOrder();">Place Order</button>
+            <button onclick="placeOrder();">Place Order</button>
+        </div>
     </div>
 </body>

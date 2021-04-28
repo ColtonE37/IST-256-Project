@@ -143,6 +143,7 @@ class User {
 function sendContact() {
   //this alert is sent after the send contact button is pushed 
   alert(firstName.value + ", thanks for reaching out!");
+  window.location.reload();
 }
 
 //checkout page

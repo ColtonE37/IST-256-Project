@@ -61,33 +61,34 @@
         <td><img src="images/IST-256-Home-Page-Image3.jpeg" alt="fashion" class="responsive">
         </td>
     </tr>
+    <div class="flex-container1">
+        <div class="center">
 
-    <div class="center">
+            <p>Do you want to leave us some feedback? Was there a problem with an order?
+                Please leave your name, email and comments for a quick response from us!
+            </p>
 
-        <p>Do you want to leave us some feedback? Was there a problem with an order?
-            Please leave your name, email and comments for a quick response from us!
-        </p>
+            <input type="text" placeholder="Enter your first name" id="firstName">
+            <input type="text" placeholder="Enter your last name" id="lastName">
+            <br>
+            <br>
+            <input type="email" placeholder="Enter your email" id="email">
+            <br>
+            <br>
 
-        <input type="text" placeholder="Enter your first name" id="firstName">
-        <input type="text" placeholder="Enter your last name" id="lastName">
-        <br>
-        <br>
-        <input type="email" placeholder="Enter your email" id="email">
-        <br>
-        <br>
+            <span>Do you have a question?</span>
+            <br>
 
-        <span>Do you have a question?</span>
-        <br>
+            <textarea id="question" rows="10" cols="50"></textarea>
+            <br>
 
-        <textarea id="question" rows="10" cols="50"></textarea>
-        <br>
+            <button onclick="sendContact();">Send contact</button>
+            <br>
+            <br>
 
-        <button onclick="sendContact();">Send contact</button>
-        <br>
-        <br>
-
-        <tr>
-            <td width="30%">&emsp;Call us at: <a href="callto:610-858-6636">610-858-6636</a></td>
-        </tr>
+            <tr>
+                <td width="30%">&emsp;Call us at: <a href="callto:610-858-6636">610-858-6636</a></td>
+            </tr>
+        </div>
     </div>
 </body>
