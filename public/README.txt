@@ -5,7 +5,7 @@ Type 127.0.0.1:3000/index
 After that, browse the website using the navigation bar
 
 
-Contributions To Deliverable 1
+Contributions To Deliverable 3
 
 Colton - Contributed by means of attending scheduled meetings on Zoom, 
 putting time in figuring out how to begin coding our website, and putting 
@@ -16,7 +16,10 @@ should share a common color scheme and to keep things simple, allow for the
 layout of the pages to be somewhat identical in code. Once all of the HTML and 
 CSS was completed for these pages, the zip file containing my work was sent to 
 another group member (Thomas) to combine both of our code together, making a 
-functioning website.
+functioning website. For this deliverable, we made use of our API and continued the functionality
+of all of our shopping pages, including an add item button to allow the user to put stuff into
+their own cart. We also took time to implement CRUD uses, such as creating a cart, reading the items in the cart on the cart/checkout pages,
+updating the cart with new items that the user adds, and deletes the user's cart upon the button click.
 
 Thomas - Contributed by means of attending scheduled meetings on Zoom, 
 putting time in figuring out how to begin coding our website, and putting 
@@ -26,9 +29,10 @@ together so I created the nav bar for all of the other pages as well. I also use
 and HTML to code the index.html home page. We figured that all pages should share a 
 common color scheme and to keep things simple, allow for the layout of the pages to be 
 somewhat identical in code. Once all of the HTML and CSS was completed for these pages, 
-Colton and I worked to put the webisite together.
-
-Steven - Did not make any contributions.
+Colton and I worked to put the webisite together. For this deliverable, we made use of our API and continued the functionality
+of all of our shopping pages, including an add item button to allow the user to put stuff into
+their own cart. We also took time to implement CRUD uses, such as creating a cart, reading the items in the cart on the cart/checkout pages,
+updating the cart with new items that the user adds, and deletes the user's cart upon the button click.
 
 Works Cited
 https://www.w3schools.com/howto/howto_js_dropdown.asp/03/24/2021

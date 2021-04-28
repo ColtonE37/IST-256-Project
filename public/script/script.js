@@ -50,6 +50,7 @@ $(document).ready(function () {
       $('#mens-btn-' + i).click(response[i], function (event) {
         makeRequest('PUT', '/updateCartProducts', (updatedCart) => {
           console.log("Cart updated successfully! ", updatedCart);
+          alert("Item was added to cart!")
         }, error => {
           console.error("Error updating cart occurred.", error);
         }, event.data)
@@ -70,6 +71,7 @@ $(document).ready(function () {
       $('#womens-btn-' + i).click(response[i], function (event) {
         makeRequest('PUT', '/updateCartProducts', (updatedCart) => {
           console.log("Cart updated successfully! ", updatedCart);
+          alert("Item was added to cart!")
         }, error => {
           console.error("Error updating cart occurred.", error);
         }, event.data)
@@ -90,6 +92,7 @@ $(document).ready(function () {
       $('#electronic-btn-' + i).click(response[i], function (event) {
         makeRequest('PUT', '/updateCartProducts', (updatedCart) => {
           console.log("Cart updated successfully! ", updatedCart);
+          alert("Item was added to cart!")
         }, error => {
           console.error("Error updating cart occurred.", error);
         }, event.data)
@@ -139,15 +142,12 @@ class User {
 
 function sendContact() {
   //this alert is sent after the send contact button is pushed 
-  alert(firstName.value + " " + "thanks for reaching out!");
-
-  //attempted to actually send this info to my email couldnt figure it out
-  // location = "mailto:thomas.j.beck23@gmail.com";
+  alert(firstName.value + " " + ", thanks for reaching out!");
 }
 
 //checkout page
 function placeOrder() {
-  alert(firstName.value + " " + "Your order has been placed! Thanks for shopping with us!")
+  alert(firstName.value + " " + ", your order has been placed! Thanks for shopping with us!")
 }
 
 function deleteCart() {

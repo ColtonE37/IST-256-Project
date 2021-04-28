@@ -3,11 +3,11 @@
 <head>
     <!-- Resources: -->
     <!-- https://www.w3schools.com/howto/howto_js_dropdown.asp -->
-    <title>IST 256 Project Sprint 2</title>
+    <title>IST 256 Project Sprint 3</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <meta charset="utf-8">
-    <meta name="description" content="IST 256 Sprint 2">
-    <meta name="keywords" content="IST 256,Sprint 2, Team 4">
+    <meta name="description" content="IST 256 Sprint 3">
+    <meta name="keywords" content="IST 256,Sprint 3, Team 4">
     <meta name="author" content="Team 4">
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <script src="script/script.js" defer></script>
@@ -56,43 +56,49 @@
         </td>
         <td><img src="images/IST-256-Home-Page-Image3.jpeg" alt="fashion" class="responsive">
         </td>
-      </tr>
+    </tr>
 
-      <div class="center">
-      <!-- https://www.codebrainer.com/blog/contact-form-in-javascript for my contact form  -->
-      <h3>Order Information</h3>
+    <div class="center">
+        <!-- https://www.codebrainer.com/blog/contact-form-in-javascript for my contact form  -->
+        <h3>Order Information</h3>
 
-    
-      <form onsubmit="return false"></form>
-      
-      <input type="text" placeholder="Enter your first name" id="firstName">
-      <input type="text" placeholder="Enter your last name" id="lastName">
-      <br>
-      <br>
-      <input type="email" placeholder="Enter your email" id="email">
-      <br>
-      <br>
 
-      <input type="text" placeholder="Enter your street address" id="streetAddress">
-      <input type="text" placeholder="Enter your ZIP code" id="zip">
-      <br>
-      <br>
+        <form onsubmit="return false"></form>
 
-      <select id="state">
-       <option disabled selected value> -- Select a State -- </option>
-       <option value="Pennsylvania">Pennsylvania</option>
-       <option value="NewYork">New York</option>
-       <option value="California">California</option>
-       <option value="Other">Other</option>
-      </select>
-      <br>
-      <br>
-      
-      <input type="radio" id="Employer" name="discription" value="employer"> Express Shipping
-      <input type="radio" id="Other" name="discription" value="other"> Standard Shipping
-      <br>
-      <br>
-      
-      <button onclick="placeOrder();">Place Order</button>
-      </div>
+        <input type="text" placeholder="Enter your first name" id="firstName">
+        <input type="text" placeholder="Enter your last name" id="lastName">
+        <br>
+        <br>
+        <input type="email" placeholder="Enter your email" id="email">
+        <br>
+        <br>
+
+        <input type="text" placeholder="Enter your street address" id="streetAddress">
+        <input type="text" placeholder="Enter your ZIP code" id="zip">
+        <br>
+        <br>
+
+        <select id="state">
+            <option disabled selected value> -- Select a State -- </option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="NewYork">New York</option>
+            <option value="California">California</option>
+            <option value="Other">Other</option>
+        </select>
+        <br>
+        <br>
+
+        <input type="radio" id="Employer" name="discription" value="employer"> Express Shipping
+        <input type="radio" id="Other" name="discription" value="other"> Standard Shipping
+        <br>
+        <br>
+
+        <div class="flex-container1">
+            <div class="flex-item1 api-data-cart">
+            </div>
+        </div>
+        <br>
+
+        <button onclick="placeOrder();">Place Order</button>
+    </div>
 </body>
